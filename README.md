@@ -97,8 +97,9 @@ Performance:
 - Tradeoff: slowest settling of the three controllers (~25 ms) — genuinely robust, not fast
   
 ## Repository Contents
-report/ — full written report (derivation, all controller designs, PLECS results, stability analysis)
-plecs/ — PLECS simulation models
+-docs/report
+-simulations/MATLAB/BodePlotFeedbackControl.m
+            /PLECS/BuckConverterFeedbackControl.plecs
 matlab/ — Bode plot and stability margin analysis scripts
 
 ## Tools
