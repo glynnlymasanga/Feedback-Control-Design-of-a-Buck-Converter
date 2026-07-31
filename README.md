@@ -98,9 +98,8 @@ Performance:
   
 ## Repository Contents
 -docs/report
--simulations/MATLAB/BodePlotFeedbackControl.m
-           -/PLECS/BuckConverterFeedbackControl.plecs
-matlab/ — Bode plot and stability margin analysis scripts
+-simulations/matlab/BodePlotFeedbackControl.m
+-           /plecs/BuckConverterFeedbackControl.plecs
 
 ## Tools
 
