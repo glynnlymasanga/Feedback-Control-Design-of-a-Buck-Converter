@@ -15,6 +15,7 @@ The project included:
 - Bode plot analysis
 - Load and line disturbance testing
 
+
 ## Converter Specifications
 
 | Parameter | Value |
@@ -29,23 +30,30 @@ The project included:
 ## Plant Model
 
 Small-signal control-to-output transfer function:
-Gvd(s) = 4.8x10^9 / (s² + 10³s + 2×10⁸)
+\[
+G_{vd}(s)=\frac{4.8\times10^9}{s^2+1000s+2\times10^8}
+\]
+Resulting system parameters:
 
-Natural frequency:
-ζ = 0.0354
+| Parameter | Value |
+|-----------|------:|
+| Natural Frequency | 14,142 rad/s |
+| Damping Ratio | 0.0354 |
+| System Order | Second Order |
+
 
 ## Controllers Evaluated
 
 ### Proportional (P)
-- Design point: Kp = 0.042 (from |Kp·Gvd(jωc)|=1 at ωc=0.1ωn)
+- Initial analytical controller gains: Kp = 0.042 (from |Kp·Gvd(jωc)|=1 at ωc=0.1ωn)
 - Simple, but permanent non-zero steady-state error (T(0)<1 always)
 
 ### PI
-- Design point: Kp = 0.0399, Ki = 16.9
-- Integrator guarantees zero steady-state error unconditionally, for any Kp
+- Initial analytical controller gains: Kp = 0.0399, Ki = 16.9
+- For the ideal averaged model, integrator guarantees zero steady-state error unconditionally, for any Kp
 
 ### PID
-- Design point: Kp = 0.0367, Ki = 11.97, Kd = 1.995e-5
+- Initial analytical controller gains: Kp = 0.0367, Ki = 11.97, Kd = 1.995e-5
 - Also achieves zero steady-state error
 - At this design's crossover, PID is not actually faster than PI (dominant pole −159.3 vs PI's −207.6) — its real, demonstrated advantage is stability robustness, not speed
 
@@ -55,28 +63,26 @@ Natural frequency:
 
 ## Key Results at analytical controller gains 
 
-| Controller | SS Error | Settling Time |
-|------------|------------|---------------|
-| Open Loop | 0.46V | ~8ms |
-| P | 6.00V | ~8ms |
-| PI | 0V | ~19.3ms |
-| PID | 0V | ~25.1ms |
+| Controller | SS Error | Settling Time | Worst-case Phase Margin (design point) |
+|------------|------------|---------------|----------|
+| Open Loop | 0.46V | ~8ms | - |
+| P | 6.00V | ~8ms | 5.70° |
+| PI | 0V | ~19.3ms | 4.66° |
+| PID | 0V | ~25.1ms | 89.52° |
 
 ### The Central Finding: Phase Margin
 
-A full-spectrum stability check (MATLAB margin() / allmargin(), not just a single-point magnitude calculation) reveals a result the pole locations alone don't show:
+<img width="1029" height="1148" alt="image" src="https://github.com/user-attachments/assets/7a5f2515-cdfd-49ef-8118-7c9fafd3b469" />
 
-|Controller | Worst-case Phase Margin (design point) |
-|-----------|----------|
-| P | 5.70° |
-| PI | 4.66° |
-| PID | 89.52° |
+A full-spectrum stability check (MATLAB margin() / allmargin(), not just a single-point magnitude calculation) reveals a result the pole locations alone don't show:
 
 P and PI, despite having reasonable-looking closed-loop poles, are both very close to instability once the entire frequency response is checked — the plant's resonance peak creates an unintended second 0dB crossing that a single-frequency design check cannot see. PID is the only one of the three that is genuinely robust, because its derivative-driven phase lead persists far enough in frequency to rescue that unintended crossing — not because it's faster.
 
 Checking the same three controllers with a much higher Kp (Kp=11, exploring the gain/steady-state-error tradeoff) makes this worse for P and PI (margin collapses to ~0.25°) while PID degrades only modestly (~23.8°) — though these particular high-gain crossovers land outside the averaged small-signal model's usual validity range (ωc < ωsw/10), a limitation discussed explicitly in the report.
 
 ### Best Result
+
+Among the analytical controller designs, the PID controller achieved the largest phase margin (89.5°) while maintaining zero steady-state error, demonstrating the best robustness to resonance-induced crossover effects.
 
 PID Controller:
 
@@ -89,6 +95,7 @@ Performance:
 - Zero steady-state error, all closed-loop poles real and stable (−159.3, −3,890, −92,735)
 - Phase margin = 89.52° across every 0dB crossing, fully within the averaged model's valid frequency range (all crossings below ωsw/10)
 - Tradeoff: slowest settling of the three controllers (~25 ms) — genuinely robust, not fast
+  
 ## Repository Contents
 report/ — full written report (derivation, all controller designs, PLECS results, stability analysis)
 plecs/ — PLECS simulation models
