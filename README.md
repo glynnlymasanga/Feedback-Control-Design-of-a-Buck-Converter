@@ -65,10 +65,12 @@ Natural frequency:
 ### The Central Finding: Phase Margin
 
 A full-spectrum stability check (MATLAB margin() / allmargin(), not just a single-point magnitude calculation) reveals a result the pole locations alone don't show:
-Controller | Worst-case Phase Margin (design point) |
-P | 5.70° |
-PI | 4.66° |
-PID | 89.52° |
+
+|Controller | Worst-case Phase Margin (design point) |
+|-----------|----------|
+| P | 5.70° |
+| PI | 4.66° |
+| PID | 89.52° |
 
 P and PI, despite having reasonable-looking closed-loop poles, are both very close to instability once the entire frequency response is checked — the plant's resonance peak creates an unintended second 0dB crossing that a single-frequency design check cannot see. PID is the only one of the three that is genuinely robust, because its derivative-driven phase lead persists far enough in frequency to rescue that unintended crossing — not because it's faster.
 
