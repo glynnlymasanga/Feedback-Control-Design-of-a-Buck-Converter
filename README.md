@@ -101,11 +101,12 @@ Performance:
 ```text
 Feedback-Control-of-a-Buck-Converter/
 │
-├── matlab/
-│   ├── BodePlotFeedbackControl.m
-│
-├── plecs/
-│   ├── BuckConverterFeedbackControl.plecs
+├── simulations/
+│   ├── matlab/
+|   |   ├── BodePlotFeedbackControl.m
+│   │
+│   └── plecs/
+│       ├── BuckConverterFeedbackControl.plecs
 │
 ├── docs/
 │   └── FeedbackConrol.pdf
