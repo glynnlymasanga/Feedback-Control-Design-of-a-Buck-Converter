@@ -1,6 +1,6 @@
 # Feedback Control Design of a Buck Converter
 
-<img width="979" height="311" alt="image" src="https://github.com/user-attachments/assets/37904e10-5e08-4503-8b4a-c8beecd382c0" />
+<img width="6952" height="3080" alt="schematic" src="https://github.com/user-attachments/assets/a83d84d5-9b56-40e9-9da1-3a73c0c1f0fc" />
 
 ## Project Summary
 
