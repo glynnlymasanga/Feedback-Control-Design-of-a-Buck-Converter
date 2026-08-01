@@ -97,6 +97,7 @@ Performance:
 - Tradeoff: slowest settling of the three controllers (~25 ms) — genuinely robust, not fast
   
 ## Repository Contents
+
 - docs/report
 - simulations/matlab/BodePlotFeedbackControl.m
 -- /plecs/BuckConverterFeedbackControl.plecs
