@@ -98,24 +98,32 @@ Performance:
 
 ## Repository Structure
 
+## Repository Structure
+
 ```text
-Feedback-Control-of-a-Buck-Converter/
+Feedback-Control-Buck-Converter/
 │
-├── simulations/
-│   ├── matlab/
-|   |   ├── BodePlotFeedbackControl.m
-│   │
-│   └── plecs/
-│       ├── BuckConverterFeedbackControl.plecs
+├── matlab/
+│   ├── bode_analysis.m
+│   ├── controller_design.m
+│   └── stability_analysis.m
 │
-├── docs/
-│   └── FeedbackConrol.pdf
+├── plecs/
+│   ├── buck_converter.plecs
+│   ├── p_controller.plecs
+│   ├── pi_controller.plecs
+│   └── pid_controller.plecs
+│
+├── report/
+│   └── Graduate_Project_Report.pdf
 │
 ├── images/
-│   ├── bodeplot.jpg
-│   ├── loadstep.
-│   └── linestep.jpgjpg
+│   ├── bode_plot.png
+│   ├── startup_response.png
+│   ├── load_step.png
+│   └── line_step.png
 │
+├── LICENSE
 └── README.md
 ```
 
