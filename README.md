@@ -99,7 +99,7 @@ Performance:
 ## Repository Contents
 -docs/report
 -simulations/matlab/BodePlotFeedbackControl.m
--           /plecs/BuckConverterFeedbackControl.plecs
+--/plecs/BuckConverterFeedbackControl.plecs
 
 ## Tools
 
