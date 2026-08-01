@@ -95,13 +95,28 @@ Performance:
 - Zero steady-state error, all closed-loop poles real and stable (−159.3, −3,890, −92,735)
 - Phase margin = 89.52° across every 0dB crossing, fully within the averaged model's valid frequency range (all crossings below ωsw/10)
 - Tradeoff: slowest settling of the three controllers (~25 ms) — genuinely robust, not fast
-  
-## Repository Contents
 
-- README.md
-- docs/report
-- simulations/matlab/BodePlotFeedbackControl.m
--            /plecs/BuckConverterFeedbackControl.plecs
+## Repository Structure
+
+```text
+Feedback-Control-of-a-Buck-Converter/
+│
+├── matlab/
+│   ├── BodePlotFeedbackControl.m
+│
+├── plecs/
+│   ├── BuckConverterFeedbackControl.plecs
+│
+├── docs/
+│   └── FeedbackConrol.pdf
+│
+├── images/
+│   ├── bodeplot.jpg
+│   ├── loadstep.
+│   └── linestep.jpgjpg
+│
+└── README.md
+```
 
 ## Tools
 
