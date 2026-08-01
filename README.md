@@ -114,7 +114,7 @@ Feedback-Control-of-a-Buck-Converter/
 ├── images/
 │   ├── bodeplot.jpg
 │   ├── loadstep.
-│   └── linestep.jpgjpg
+│   └── linestep.jpg
 │
 └── README.md
 ```
