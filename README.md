@@ -97,6 +97,11 @@ Performance:
 ```text
 Feedback-Control-of-a-Buck-Converter/
 │
+├── datasheets/
+|   ├── infineon-irlml5103-datasheet-en.pdf
+|   |
+│   └── onsemi-schottky-ss32-s310-datasheet.pdf
+│
 ├── docs/
 │   └── FeedbackConrolOfABuck.pdf
 |
