@@ -84,10 +84,7 @@ Checking the same three controllers with a much higher Kp (Kp=11, exploring the 
 Among the analytical controller designs, the PID controller achieved the largest phase margin (89.5°) while maintaining zero steady-state error, demonstrating the best robustness to resonance-induced crossover effects.
 
 PID Controller:
-
-- Kp = 0.0367
-- Ki = 11.97
-- Kd = 1.995e-5
+- Kp = 0.0367, Ki = 11.97, Kd = 1.995e-5
 
 Performance:
 
