@@ -30,12 +30,7 @@ The project included:
 ## Plant Model
 
 Small-signal control-to-output transfer function:
-
-```text
-           4.8 × 10^9
-Gvd(s) = -------------------
-         s² + 1000s + 2 × 10^8
-```
+Gvd(s) = 4.8 × 10⁹ / (s² + 1000s + 2 × 10⁸)
 
 Resulting system parameters:
 
