@@ -109,7 +109,7 @@ Feedback-Control-of-a-Buck-Converter/
 │       └── BuckConverterFeedbackControl.plecs
 │
 ├── docs/
-│   └── FeedbackConrol.pdf
+│   └── FeedbackConrolOfABuck.pdf
 │
 ├── images/
 │   ├── bodeplot.jpg
