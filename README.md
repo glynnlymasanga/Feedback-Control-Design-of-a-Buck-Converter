@@ -30,6 +30,7 @@ The project included:
 ## Plant Model
 
 Small-signal control-to-output transfer function:
+
 ```text
            4.8 × 10^9
 Gvd(s) = -------------------
