@@ -1,4 +1,4 @@
-# Feedback Control Design of a Buck Converter
+# Feedback-Control-Design-of-a-Buck-Converter
 
 <img width="6952" height="3080" alt="schematic" src="https://github.com/user-attachments/assets/a83d84d5-9b56-40e9-9da1-3a73c0c1f0fc" />
 
