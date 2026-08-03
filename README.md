@@ -103,10 +103,10 @@ Feedback-Control-of-a-Buck-Converter/
 │
 ├── simulations/
 │   ├── matlab/
-|   |   ├── BodePlotFeedbackControl.m
+|   |   └── BodePlotFeedbackControl.m
 │   │
 │   └── plecs/
-│       ├── BuckConverterFeedbackControl.plecs
+│       └── BuckConverterFeedbackControl.plecs
 │
 ├── docs/
 │   └── FeedbackConrol.pdf
