@@ -110,10 +110,6 @@ Feedback-Control-of-a-Buck-Converter/
 ├── docs/
 │   └── FeedbackConrolOfABuck.pdf
 │
-├── images/
-│   ├── bodeplot.jpg
-│   ├── loadstep.jpg
-│   └── linestep.jpg
 │
 └── README.md
 ```
